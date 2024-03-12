@@ -1,0 +1,9 @@
+doctype html
+html(lang='en')
+body
+.container
+  h1= `posts by ${requ}`
+  br
+  each post in posts
+      li 
+        a(href=`../post/${post.id}`)= `Post #${post.id}`

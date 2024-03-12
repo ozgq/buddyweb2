@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+head
+  link(rel='stylesheet', type='text/css', href='../style.css')
+body
+  .container
+    include ./viewlets/banner.pug
+    .main
+      if currentUser.username === 'sus'
+        each user in users
+          li
+            a(href=`~${user.username}`)= `~${user.username} `
+            form(action='/admin', method='post', style='display:inline;')
+              input(type='hidden', name='deleteUser', value=user.username)
+              button(type='submit' style='border: none; background-color: transparent; color: #d6d6b5; font-size: 15px; text-decoration: underline; cursor: pointer;') (delete user)
+      else
+        h1 Green fn
+    .footer
+      p &copy; 2024- buddynet llc. all rights reserved(?)

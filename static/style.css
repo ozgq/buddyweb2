@@ -1,0 +1,36 @@
+body {
+    font-family: monospace, sans-serif;
+    background: rgb(32, 32, 32);
+    color: #d6d6b5;
+    font-size: 15px;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+.banner, .main {
+    border: 1px solid rgb(127, 124, 161);
+    border-bottom: 0;
+    background:rgb(80, 80, 80);
+    padding: 8px 8px 20px 8px;
+}
+
+.footer {
+    border: 1px solid rgb(127, 124, 161);
+    background:rgb(80, 80, 80);
+    padding: 8px;
+}
+
+.banner h1 {
+    margin-bottom: 5px;
+}
+
+a {
+    color: #d6d6b5;
+}
+
+input, button {
+    margin-bottom: 5px;
+}

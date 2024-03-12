@@ -1,0 +1,36 @@
+link(rel='stylesheet', type='text/css', href='../txt.css')
+form(id="bloggingForm" method="POST")
+  fieldset
+    legend
+      button(type="submit") Save
+      button(type="button", onclick="toggleBloggingMode()") #{buttonText}
+    textarea#txt(rows="10", cols="80", name="html", placeholder="type your text here....") !{indexPage}
+script(src="../textbox.js")
+script.
+  document.getElementById('txt').value = `!{indexPage}`;
+
+  var form = document.getElementById('bloggingForm');
+  var buttonText = "Switch to blogging mode";
+
+  function toggleBloggingMode() {
+    var currentAction = form.getAttribute('action');
+    
+    if (currentAction === "/dashboard") {
+      form.setAttribute('action', "/blogging");
+      buttonText = "Switch to dashboard mode";
+      document.getElementById('txt').value = ``;
+    } else {
+      form.setAttribute('action', "/dashboard");
+      buttonText = "Switch to blogging mode";
+      document.getElementById('txt').value = `!{indexPage}`;
+    }
+
+    updateButtonText();
+  }
+
+  function updateButtonText() {
+    var button = form.querySelector('button[type="button"]');
+    button.textContent = buttonText;
+  }
+
+  toggleBloggingMode();

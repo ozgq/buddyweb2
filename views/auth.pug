@@ -1,0 +1,17 @@
+doctype html
+html(lang='en')
+head
+  link(rel='stylesheet', type='text/css', href='../style.css')
+body
+  .container
+    include ./viewlets/banner.pug
+    .main
+      form(action="/auth", method="POST")
+        h4 #{message}
+        input(name="username", type="text", required, placeholder="Username")
+        br
+        input(name="password", type="password", required, placeholder="Password")
+        br
+        button(type="submit") Sign me up!
+    .footer
+      p &copy; 2024- buddynet llc. all rights reserved(?)

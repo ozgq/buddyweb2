@@ -1,0 +1,16 @@
+doctype html
+html(lang='en')
+head
+  link(rel='stylesheet', type='text/css', href='../style.css')
+body
+.container
+  include ./viewlets/banner.pug
+  .main
+    p buddyweb is a community of chums, buddies, and friends who want to make one-page websites.
+    a(href="auth") get started here >>
+    p current users:
+    each user in users
+      li 
+        a(href=`~${user.username}`)= `~${user.username}`
+  .footer
+    p &copy; 2024- buddynet llc. all rights reserved(?)

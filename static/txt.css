@@ -1,0 +1,25 @@
+* { 
+    font-family: monospace; 
+} 
+textarea {
+    resize: none; 
+    border: 1px solid rgb(114, 114, 114); 
+    background: rgb(114, 114, 114);
+} 
+textarea::placeholder {
+    color: rgb(211, 211, 211);
+}
+fieldset {
+    width: 40%;
+    border: 4px solid rgb(34, 34, 34);
+    background: rgb(114, 114, 114);
+}
+
+legend button[type="submit"], button[type="button"] {
+    padding: 4px;
+    background: rgb(34, 34, 34);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 2px;
+  }

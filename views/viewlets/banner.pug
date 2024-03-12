@@ -1,0 +1,15 @@
+.banner
+    if currentUser
+        i(style='float:right;')
+            | logged in as 
+            a(href=`~${currentUser.username}`) #{currentUser.username}
+            |  &bull; 
+            a(href="dashboard") dashboard
+            |  &bull; 
+            a(href=`blogs/${currentUser.username}`) my blogposts
+    else
+        i(style="float:right") Not logged in &bull; 
+            a(href="auth") log in
+    h1 buddyweb
+    i hello bro
+    marquee(style="background: yellow; padding:2px; color:red;") IMPORTANT ANNOUNCEMENT; THIS IS THE DEV BUILD OF BUDDYWEB. IT WILL GO DOWN FREQUENTLY (obviously). PLEASE BACK UP YOUR SITES OFTEN IF YOU CARE THAT MUCH 
